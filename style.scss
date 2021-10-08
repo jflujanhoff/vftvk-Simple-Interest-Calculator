@@ -71,3 +71,73 @@ body {
         }
     }
 }
+
+@media only screen and (max-width:900px) {
+    body {
+        background: black;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+    
+        .calculator-body {
+            background-color: white;
+            padding: 2rem 3rem;
+            width: 90%;
+            margin: auto;
+            border-radius: 2rem;
+    
+            h1 {
+                color: grey;
+                font-size: 2.5rem;
+            }
+    
+            .error {
+                background: rgb(249, 83, 83);
+                color: white;
+                padding: 0.4rem 0.6rem;
+                display: none;
+    
+                &.active {
+                    display: block;
+                }
+    
+            }
+    
+            .controls {
+                width: 100%;
+                margin: 1rem auto;
+    
+                .user-input {
+                    display: flex;
+                    margin-bottom: 0.5rem;
+                    
+                    label {
+                        width: 40%;
+                    }
+                }
+            }
+    
+            button {
+                margin-bottom: 1rem;
+                padding: 0.2rem 0.3rem;
+            }
+    
+            .result {
+                display: none;
+    
+                &.active {
+                    display: block;
+                }
+    
+                p {
+                    span {
+                        background: yellow;
+                    }
+                }
+            }
+    
+            .copywrite {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
