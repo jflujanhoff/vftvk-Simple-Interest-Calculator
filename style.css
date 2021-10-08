@@ -1,4 +1,74 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+body {
+  background: black;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+body .calculator-body {
+  background-color: white;
+  padding: 4rem 6rem;
+  width: 50%;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+body .calculator-body h1 {
+  color: grey;
+  font-size: 2.5rem;
+}
+
+body .calculator-body .error {
+  background: #f95353;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  display: none;
+}
+
+body .calculator-body .error.active {
+  display: block;
+}
+
+body .calculator-body .controls {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+body .calculator-body .controls .user-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+body .calculator-body .controls .user-input label {
+  width: 40%;
+}
+
+body .calculator-body button {
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.3rem;
+}
+
+body .calculator-body .result {
+  display: none;
+}
+
+body .calculator-body .result.active {
+  display: block;
+}
+
+body .calculator-body .result p span {
+  background: yellow;
+}
+
+body .calculator-body .copywrite {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

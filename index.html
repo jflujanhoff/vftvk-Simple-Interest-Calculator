@@ -1,16 +1,61 @@
 <html>
     <head>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <section class="calculator-body">
+            <h1>Simple Interest Calculator</h1>
+            <p class="error">Hello</p>
+    
+            <!-- Controls -->
+            <div class="controls">
+                <div class="user-input">
+                    <label for="deposit">Amount</label>
+                    <input type="number"  id="deposit" name="deposit">  <br/>
+                </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+                <div class="user-input">
+                    <label for="rate">Interest Rate</label>
+                    <input 
+                        type="range"  
+                        id="rate" 
+                        name="rate" 
+                        min="0" 
+                        max="10" 
+                        step=".1"
+                        onchange="updateRate(this.value)">  
+                    <br/>
+                    <p class="rate-show"></p>
+                </div>
 
-        <button onclick="compute()">Compute</button>
+                <div class="user-input">                    
+                    <label for="years">No. of Years</label>
+                    <select name="years" id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                </div>
+                
+                <label for="interests"></label>
+                <span id="result"></span><br>
+            </div>
+    
+            <!-- Button CTA -->
+            <button onclick="compute()">Compute Interest</button>
+
+            <!-- Result -->
+            <div class="result">
+                <p class="result__deposit">If you deposit <span class="span-deposit"></span>,</p>
+                <p class="result__rate">at an interest rate of <span class="span-rate"></span>.</p>
+                <p class="result__amount">You will receive an amount of <span class="span-amount"></span>,</p>
+                <p class="result__year">in the year <span class="span-year"></span></p>
+            </div>
+
+            <p class="copywrite"><span>&copy</span> Everyone Can Get Rich</p>
+        </section>
+        <script src="script.js"></script>
     </body>
 </html>
